@@ -1,8 +1,10 @@
 {
-    "--apk": "/Users/linpengcheng/Desktop/ApkChecker_new/upload/APKPure_v3.17.10_apkpure.com.apk",
-    "--output": "/Users/linpengcheng/Desktop/ApkChecker_new/out/check",
+    "--apk": "/Users/zouji/PycharmProjects/ApkChecker_new/upload/app-inner-arm32-debug.apk",
+    "--output": "/Users/zouji/PycharmProjects/ApkChecker_new/out/check",
+    "--format": "mm.html,mm.json",
     "--formatConfig": [
         {
+            "name": "-countMethod",
             "group": [
                 {
                     "name": "Android System",
@@ -13,11 +15,10 @@
                     "package": "java"
                 },
                 {
-                    "name": "com.test",
-                    "package": "com.test"
+                    "name": "com.tencent.test.$",
+                    "package": "com.tencent.test.$"
                 }
-            ],
-            "name": "-countMethod"
+            ]
         }
     ],
     "options": [
@@ -25,28 +26,24 @@
             "name": "-manifest"
         },
         {
-            "--suffix": "png, jpg, jpeg, gif, arsc, webp, mp4, mp3, vvc, so",
-            "--min": "10",
             "name": "-fileSize",
-            "--order": "desc"
+            "--min": "10",
+            "--order": "desc",
+            "--suffix": "png, jpg, jpeg, gif, arsc"
         },
         {
-            "--group": "package",
-            "name": "-countMethod"
+            "name": "-countMethod",
+            "--group": "package"
         },
         {
             "name": "-checkResProguard"
         },
         {
-            "--min": "10",
-            "name": "-findNonAlphaPng"
-        },
-        {
             "name": "-checkMultiLibrary"
         },
         {
-            "--suffix": "png, jpg, jpeg, gif, arsc",
-            "name": "-uncompressedFile"
+            "name": "-uncompressedFile",
+            "--suffix": "png, jpg, jpeg, gif, arsc"
         },
         {
             "name": "-countR"
@@ -60,6 +57,5 @@
                 "*.so"
             ]
         }
-    ],
-    "--format": "mm.html,mm.json"
+    ]
 }
